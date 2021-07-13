@@ -216,6 +216,12 @@
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>flatten-maven-plugin</artifactId>
             </plugin>
+                 <!---let the idiotism begin.---->
+                  <plugin>
+                  <groupId>com.softserveinc.ita.homeproject</groupId>
+                   <artifactId>home-api-tests</artifactId>
+                  <version>0.0.1</version>
+                  </plugin>
         </plugins>
     </build>
 
