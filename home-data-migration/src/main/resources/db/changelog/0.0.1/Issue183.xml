@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="Issue180.001" author="Ilya-Ross">
+        <insert dbms="postgresql"
+                schemaName="public"
+                tableName="permissions">
+            <column name="id" value="39"/>
+            <column name="name" value="UPDATE_OWNERSHIP_PERMISSION"/>
+        </insert>
+        <insert dbms="postgresql"
+                schemaName="public"
+                tableName="permissions">
+            <column name="id" value="40"/>
+            <column name="name" value="DELETE_OWNERSHIP_PERMISSION"/>
+        </insert>
+        <insert dbms="postgresql"
+                schemaName="public"
+                tableName="permissions">
+            <column name="id" value="41"/>
+            <column name="name" value="GET_OWNERSHIP_PERMISSION"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="Issue180.002" author="Ilya-Ross">
+        <insert dbms="postgresql"
+                schemaName="public"
+                tableName="role_permissions">
+            <column name="role_id" value="1"/>
+            <column name="permission_id" value="39"/>
+        </insert>
+        <insert dbms="postgresql"
+                schemaName="public"
+                tableName="role_permissions">
+            <column name="role_id" value="1"/>
+            <column name="permission_id" value="40"/>
+        </insert>
+        <insert dbms="postgresql"
+                schemaName="public"
+                tableName="role_permissions">
+            <column name="role_id" value="1"/>
+            <column name="permission_id" value="41"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>
